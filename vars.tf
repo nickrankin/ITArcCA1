@@ -5,8 +5,8 @@ variable "TOKEN" {}
 variable "AMI" {
   type = map(string)
   default = {
-    us-east-1 = "ami-0dfcb1ef8550277af"
-    us-east-2 = "ami-0cc87e5027adcdca8"
+    us-east-1 = "ami-0c7217cdde317cfec"
+    us-east-2 = "ami-0c7217cdde317cfec"
   }
 }
 
@@ -23,11 +23,15 @@ variable "KEY_NAME" {
 }
 
 variable "SERVER_TAGS" {
-  default = "Demo"
+  default = "CA1_instance"
+}
+
+variable "MANAGEMENT_SERVER_NAME" {
+  default="CA1 Management Instance"
 }
 
 variable "COUNT" {
-  default = "2"
+  default = "3"
 }
 
 variable SERVER_SECURITY_GROUP_NAME {
@@ -54,12 +58,16 @@ variable "HTTP_PORT" {
   default = "80"
 }
 
+variable "TOMCAT_HTTP_PORT" {
+  default = "8080"
+}
+
 variable "HTTPS_PORT" {
   default = "443"
 }
 
 variable "IP_RANGE" {
-  default = "0.0.0.0/16"
+  default = "0.0.0.0/0"
 }
 
 variable "DB_NAME" {
@@ -100,4 +108,12 @@ variable RDS_SECURITY_GROUP_DESC {
 
 variable RDS_SECURITY_GROUP_TAGS {
   default = "db security group"
+}
+
+variable LOAD_BALANCER_NAME {
+  default = "LB"
+}
+
+variable LOAD_BALANCER_TAG {
+  default = "Load Balancer for CA1"
 }

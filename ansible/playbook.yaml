@@ -1,0 +1,10 @@
+---
+-
+  hosts: servers
+  become: yes
+  tasks:
+    -
+      copy: "src={{ file }} dest=/CA1-Web-Services/src/main/resources"
+      name: "Copy modified Forms.json to all registered servers"
+  vars:
+    file: ./Forms.json

@@ -1,0 +1,12 @@
+https://github.com/kevinbayliss/ansible-demo/blob/main/Instructions.txt
+
+1.
+- sudo vi /etc/ansible/hosts
+
+2.
+Add the labuser key pair to the SSH agent.
+- cd ~ && eval `ssh-agent -s` && vi labuser.pem
+- chmod 400 labuser.pem && ssh-add labuser.pem
+
+3.
+- export ANSIBLE_HOST_KEY_CHECKING=False && ansible servers -m ping

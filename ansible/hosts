@@ -1,0 +1,4 @@
+[servers]
+<IP1> ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3
+<IP2> ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3
+<IP2> ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3
